@@ -1,0 +1,136 @@
+<div
+        class="col-gap-16 md:col-count-2 print:col-count-2 md:h-letter-col-full print:h-letter-col-full col-fill-balance">
+  <!-- Contact Information ------------------------------------------------------------------------------------->
+  <section class="pb-4 mt-4 first:mt-0 w-full">
+    <!-- To keep in the same column -------------------------------------------------------------------------->
+    <div class="break-inside-avoid">
+      <section class="pb-2 mb-2 border-b-2 break-inside-avoid">
+        <ul class="list-inside pr-7">
+          <%= header_link to: "https://github.com/yknx4", title: "Github", text: "yknx4" %>
+          <%= header_link to: "mailto:me@ale.world", title: "Email", text: "me@ale.world" %>
+          <%= header_link to: "tel:+5213122666130", title: "Phone", text: "+52 1(312) 134-3107" %>
+        </ul>
+      </section>
+    </div>
+  </section>
+  <!--Summary ---------------------------------------------------------------------------------------------------------->
+  <section class="pb-2 pb-4 mt-4 border-b-4 first:mt-0">
+    <!-- To keep in the same column -->
+    <div class="break-inside-avoid">
+      <h2 class="mb-2 text-lg font-bold tracking-widest text-gray-700 print:font-normal">
+        SUMMARY
+      </h2>
+      <section class="mb-2 break-inside-avoid">
+        <p class="mt-2 leading-normal text-gray-700 text-md">
+          Devops Engineer and Backend Developer with passion and demonstrable knowledge
+          on how to handle complex infrastructures in production environments.
+         <br/>
+          I am deeply interested in the newest technologies and the best practices for
+          software development.
+          <br/>
+          I have been programming since Secondary School, and have tried multiple languages and platforms. So far liking Ruby/Rails, Javascript/Node.js, C#/.NET and Kotlin/Android the most.
+          <br/>
+          I love to read everything about tech, and I try to hack every single gadget in my hands.
+          <br/>
+          Currently I have a router with tomato-wrt working as my personal server, proud owner of a Hackintosh, I also enjoy the music, and have played guitar for about 11 years, but mostly as a casual hobby and not as a professional guitarist.
+          <br/>
+          <small>Always looking for LGBT+ friendly environment.</small><br/>
+          <small>Highly Functional ASD</small><br/>
+        </p>
+      </section>
+    </div>
+  </section>
+  <!--Experience ------------------------------------------------------------------------------------------------------>
+  <section class="pb-2 pb-4 mt-4 border-b-4 first:mt-0">
+    <!-- To keep in the same column ------------------------------------------------------------------------->
+    <div class="break-inside-avoid">
+      <h2 class="mb-2 text-lg font-bold tracking-widest text-gray-700 print:font-normal">
+        EXPERIENCE
+      </h2>
+      <!--Job 1-->
+      <%= experience |> Enum.map(&experience_block/1) %>
+    </div>
+  </section>
+  <!--Education -------------------------------------------------------------------------------------------------------->
+  <section class="pb-2 pb-4 mt-4 border-b-4 first:mt-0">
+    <!-- To keep in the same column -->
+    <div class="break-inside-avoid">
+      <h2 class="mb-2 text-lg font-bold tracking-widest text-gray-700 print:font-normal">
+        EDUCATION
+      </h2>
+      <!-- school --------------------------------------------------------------------------->
+      <%= school |> Enum.map(&education_block/1) %>
+    </div>
+  </section>
+  <!--Projects ---------------------------------------------------------------------------------------------------------->
+  <section class="pb-2 pb-4 mt-4 border-b-4 first:mt-0">
+    <div class="break-inside-avoid">
+      <!-- To keep in the same column -->
+      <h2 class="mb-2 text-lg font-bold tracking-widest text-gray-700 print:font-normal">
+        PROJECTS
+      </h2>
+      <!--Project 1 --------------------------------------------------------------------------------------------------------->
+      <%= projects |> Enum.map(&project_block/1) %>
+    </div>
+  </section>
+  <!--Begin Skills ----------------------------------------------------------------------------------------------------->
+  <section class="pb-4 mt-4 first:mt-0">
+    <!-- To keep in the same column -->
+    <div class="break-inside-avoid">
+      <h2 class="mb-2 text-lg font-bold tracking-widest text-gray-700 print:font-normal">
+        SKILLS
+      </h2>
+      <section class="mb-2 break-inside-avoid">
+        <header>
+          <h3 class="text-lg font-semibold text-gray-700 leading-snugish">
+            Languages
+          </h3>
+        </header>
+        <div class="my-1 last:pb-1">
+          <ul class="flex flex-wrap text-sm2 leading-relaxed -mr-1.6 -mb-1">
+            <%= languages_skills() |> Enum.map(&skill_tag/1) %>
+          </ul>
+        </div>
+      </section>
+
+      <!--Full Stack Development ------------------------------------------------------------------------------------------->
+      <section class="mb-2 break-inside-avoid">
+        <header>
+          <h3 class="text-lg font-semibold text-gray-700 leading-snugish">
+            Backend Development
+          </h3>
+        </header>
+        <div class="my-1 last:pb-1">
+          <ul class="flex flex-wrap text-sm2 leading-relaxed -mr-1.6 -mb-1">
+            <%= backend_skills() |> Enum.map(&skill_tag/1) %>
+          </ul>
+        </div>
+      </section>
+      <!--DevOps ------------------------ ------------------------------------------------------------------------------------------->
+      <section class="mb-2 break-inside-avoid">
+        <header>
+          <h3 class="font-semibold text-gray-700 text-m leading-snugish">
+            DevOps
+          </h3>
+        </header>
+        <div class="my-1 last:pb-1">
+          <ul class="flex flex-wrap text-sm2 leading-relaxed -mr-1.6 -mb-1">
+            <%= devops_skills() |> Enum.map(&skill_tag/1) %>
+          </ul>
+        </div>
+      </section>
+      <section class="mb-2 break-inside-avoid">
+        <header>
+          <h3 class="text-lg font-semibold text-gray-700 leading-snugish">
+            Front End Development
+          </h3>
+        </header>
+        <div class="my-1 last:pb-1">
+          <ul class="flex flex-wrap text-sm2 leading-relaxed -mr-1.6 -mb-1">
+            <%= frontend_skills() |> Enum.map(&skill_tag/1) %>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </section>
+</div>

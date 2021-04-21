@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="description" content="Full Stack Web Developer" />
+    <meta name="keywords" content="resume,cv,Ale Ornelas Figueroa" />
+    <meta name="author" content="Jade Alejandra Ornelas Figueroa" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ale Ornelas</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+      <link rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/app.css")%>"/>
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
+      <!-- <link rel="stylesheet" href="https://thomashighbaugh.github.io/resume/build.css"/> --->
+      <script defer type="text/javascript" src="<%= Routes.static_path(@conn, "/js/app.js") %>"></script>
+    </head>
+    <body class="bg-hero-circuit-board 0">
+      <main class="hyphens-manual">
+        <div
+      class="max-w-3xl p-3 mx-auto my-auto bg-gray-100 border-4 border-gray-700 print:border-0 page print:max-w-letter md:max-w-letter md:h-letter xsm:p-8 sm:p-9 md:p-16 lg:mt-6 rounded-2xl print:bg-white">
+          <!-- Name ---------------------------------------------------------------------------------------------------->
+          <header class="inline-flex items-baseline justify-between w-full mb-3 align-top border-b-8">
+            <div class="block">
+              <h1 class="pb-px mb-0 text-5xl font-semibold text-gray-750">
+                Alejandra Ornelas Figueroa
+              </h1>
+              <!--Job Title--------------------------------------------------------------------------------------------------------->
+              <h2 class="m-0 ml-2 text-2xl font-semibold text-gray-700 leading-snugish">
+                Devops Engineer - Backend Dev
+              </h2>
+              <!--Location --------------------------------------------------------------------------------------------------------->
+              <h3 class="m-0 mt-2 ml-2 font-semibold text-md text-gray-550 leading-snugish">
+                Colima, México
+              </h3>
+            </div>
+            <!--   Initials Block         -->
+            <div
+          class="justify-between px-3 mt-0 mb-5 text-3xl font-bold leading-none text-gray-200 initials-container bg-gray-750 print:bg-black"
+          style="padding-bottom: 1.5rem; padding-top: 1.5rem">
+              <div class="text-center initial">A</div>
+              <div class="text-center initial">O</div>
+              <div class="text-center initial">F</div>
+            </div>
+          </header>
+          <!-- Column -------------------------------------------------------------------------------------------------->
+          <%= @inner_content %>
+          <!-- end Page -->
+        </main>
+        <!--<footer class="bg-gray-100">
+          <div class="bg-gray-100 pt-2 ">
+            <div class="flex pb-5 px-3 m-auto pt-5 border-t text-gray-800 text-sm flex-col
+      md:flex-row max-w-6xl">
+              <div class="mt-2">Inspired by <a href='https://github.com/Thomashighbaugh/resume' target='_blank' rel="noreferer"><i class="fab fa-github"></i> Thomashighbaugh/resume</a></div>
+              <div class="md:flex-auto md:flex-row-reverse mt-2 flex-row flex">
+                <a href="mailto:me@ale.world" class="fill-current cursor-pointer text-gray-500 hover:text-gray-400 w-6 mx-1">
+                  <i class="far fa-envelope"></i>
+                </a>
+                <a href="https://facebook.com/yknx4" target="_blank" class="fill-current cursor-pointer text-gray-500 hover:text-gray-400 w-6 mx-1">
+                  <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://github.com/yknx4" target="_blank" class="fill-current cursor-pointer text-gray-500 hover:text-gray-400 w-6 mx-1">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a href="https://linkedin.com/in/yknx4" target="_blank" class="fill-current cursor-pointer text-gray-500 hover:text-gray-400 w-6 mx-1">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+                <%= if function_exported?(Routes, :live_dashboard_path, 2) do %>
+                  <%= link to: Routes.live_dashboard_path(@conn, :home), class: "fill-current cursor-pointer text-gray-500 hover:text-gray-400 w-6 mx-1" do%>
+                    <i class="fab fa-phoenix-framework"></i>
+                  <% end %>
+                <% end %>
+              </div>
+            </div>
+          </footer> -->
+      </body>
+    </html>

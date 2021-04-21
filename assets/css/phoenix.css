@@ -1,0 +1,67 @@
+@screen print {
+  @page {
+    margin: 0;
+  }
+
+  body {
+    -webkit-print-color-adjust: exact !important;
+    color-adjust: exact !important;
+    color: #343a40 !important;
+
+  }
+
+  .page {
+    padding: theme(spacing.16) theme(spacing.16) !important;
+  }
+
+  .initial {
+    color: transparent !important;
+    text-shadow: 0 0 0 #fff !important;
+  }
+
+  h1,
+  h2,
+  h3,
+  p,
+  li {
+    color: #343a40 !important;
+  }
+
+  html {
+    font-size: 11px !important;
+  }
+}
+
+html {
+  background-color: #DFDBE5;
+  background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.4'%3E%3Cpath d='M50 50c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10s-10-4.477-10-10 4.477-10 10-10zM10 10c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10S0 25.523 0 20s4.477-10 10-10zm10 8c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm40 40c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+
+@screen sm {
+  html {
+    font-size: calc(11px + (16 - 11) * (100vw - 640px) / (833 - 640));
+  }
+}
+
+@screen md {
+  html {
+    font-size: calc(11px + (16 - 11) * (100vw - 833px) / (1079.5 - 833));
+  }
+}
+
+@screen lg {
+  html {
+    font-size: 13px;
+  }
+}
+
+body .icon-parent::before {
+  content: "A";
+  width: 0;
+  visibility: hidden;
+  display: inline-block;
+}
+i:hover{
+  color: #343a40 !important;
+}
