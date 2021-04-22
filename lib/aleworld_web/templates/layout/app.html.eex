@@ -50,9 +50,9 @@
           <%= @inner_content %>
           <!-- end Page -->
         </main>
-        <!--<footer class="bg-gray-100">
+        <footer class="bg-gray-100">
           <div class="bg-gray-100 pt-2 ">
-            <div class="flex pb-5 px-3 m-auto pt-5 border-t text-gray-800 text-sm flex-col
+            <div class="flex pb-5 px-3 m-auto pt-5 border-t text-gray-800 text-base flex-col
       md:flex-row max-w-6xl">
               <div class="mt-2">Inspired by <a href='https://github.com/Thomashighbaugh/resume' target='_blank' rel="noreferer"><i class="fab fa-github"></i> Thomashighbaugh/resume</a></div>
               <div class="md:flex-auto md:flex-row-reverse mt-2 flex-row flex">
@@ -75,6 +75,6 @@
                 <% end %>
               </div>
             </div>
-          </footer> -->
+          </footer>
       </body>
     </html>

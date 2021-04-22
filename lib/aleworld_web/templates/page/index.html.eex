@@ -8,7 +8,7 @@
         <ul class="list-inside pr-7">
           <%= header_link to: "https://github.com/yknx4", title: "Github", text: "yknx4" %>
           <%= header_link to: "mailto:me@ale.world", title: "Email", text: "me@ale.world" %>
-          <%= header_link to: "tel:+5213122666130", title: "Phone", text: "+52 1(312) 134-3107" %>
+          <%= header_link to: "tel:+5213122666130", title: "Phone", text: "+52 1(312) 266-6130" %>
         </ul>
       </section>
     </div>
@@ -52,7 +52,7 @@
     </div>
   </section>
   <!--Education -------------------------------------------------------------------------------------------------------->
-  <section class="pb-2 pb-4 mt-4 border-b-4 first:mt-0">
+  <section class="pb-4 mt-4 border-b-4 first:mt-0">
     <!-- To keep in the same column -->
     <div class="break-inside-avoid">
       <h2 class="mb-2 text-lg font-bold tracking-widest text-gray-700 print:font-normal">
