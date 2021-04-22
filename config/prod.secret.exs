@@ -13,7 +13,7 @@ use Mix.Config
 
 config :aleworld, Aleworld.Repo,
   # ssl: true,
-  database: "myapp_dev",
+  database: "aleworld",
   socket_dir: "/var/run/postgresql",
   pool_size: String.to_integer(System.get_env("POOL_SIZE") || "10")
 
