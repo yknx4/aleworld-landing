@@ -4,17 +4,15 @@
 # remember to add this file to your .gitignore.
 use Mix.Config
 
-# database_url =
-#   System.get_env("DATABASE_URL") ||
-#     raise """
-#     environment variable DATABASE_URL is missing.
-#     For example: ecto://USER:PASS@HOST/DATABASE
-#     """
+database_url =
+  System.get_env("DATABASE_URL") ||
+    raise """
+    environment variable DATABASE_URL is missing.
+    For example: ecto://USER:PASS@HOST/DATABASE
+    """
 
 config :aleworld, Aleworld.Repo,
-  # ssl: true,
-  database: "aleworld",
-  socket_dir: "/var/run/postgresql",
+  url: database_url,
   pool_size: String.to_integer(System.get_env("POOL_SIZE") || "10")
 
 secret_key_base =
@@ -36,7 +34,7 @@ config :aleworld, AleworldWeb.Endpoint,
 # If you are doing OTP releases, you need to instruct Phoenix
 # to start each relevant endpoint:
 #
-#     config :aleworld, AleworldWeb.Endpoint, server: true
+config :aleworld, AleworldWeb.Endpoint, server: true
 #
 # Then you can assemble a release by calling `mix release`.
 # See `mix help release` for more information.
